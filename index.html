@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Shivani — A Night to Remember 🌹</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;600&family=Raleway:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shivani-style.css">
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+<div id="aurora">
+  <div class="aurora-band ab1"></div>
+  <div class="aurora-band ab2"></div>
+  <div class="aurora-band ab3"></div>
+</div>
+
+<div id="scene">
+
+  <!-- ══ PAGE 1 : TITLE CARD ══ -->
+  <div class="page active" id="p1">
+    <div class="star-name">Shivani</div>
+    <div class="dots">
+      <div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+    <p class="cinzel">A message from the stars</p>
+    <div class="shivani-name">Shivani</div>
+    <div class="divider"></div>
+    <p class="body-text" style="margin-bottom:1.4rem;">
+      The night sky has a thousand stars — but tonight, every single one<br>
+      is shining just for <em>you</em>.
+    </p>
+    <button class="btn-glow" onclick="go(2)">Begin ✦</button>
+  </div>
+
+  <!-- ══ PAGE 2 : TYPEWRITER LETTER ══ -->
+  <div class="page" id="p2">
+    <div class="dots">
+      <div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+    <p class="cinzel">A letter written in starlight</p>
+    <div class="divider"></div>
+    <div class="typewriter" id="tw-text"><span class="cursor"></span></div>
+    <div class="divider" style="margin-top:1rem;"></div>
+    <p class="body-text" style="font-size:0.9rem; opacity:0.7;" id="tw-sub"></p>
+    <button class="btn-glow" id="p2-btn" style="display:none;" onclick="go(3)">Continue ✦</button>
+  </div>
+
+  <!-- ══ PAGE 3 : BLOOMING ROSE ══ -->
+  <div class="page" id="p3">
+    <div class="dots">
+      <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+    <p class="cinzel">Like a rose in the dark</p>
+    <div class="css-rose" id="css-rose" style="display:none;">
+      <div class="petal-layer p1"></div><div class="petal-layer p2"></div>
+      <div class="petal-layer p3"></div><div class="petal-layer p4"></div>
+      <div class="petal-layer p5"></div><div class="petal-layer p6"></div>
+      <div class="petal-layer p7"></div><div class="petal-layer p8"></div>
+      <div class="rose-center"></div>
+    </div>
+    <div class="dark-quote">
+      "She bloomed in the dark, like a rose that never needed the sun to know she was beautiful."
+      <span>— written for Shivani</span>
+    </div>
+    <p class="body-text" style="font-size:0.92rem;">
+      Shivani, you are that rose. Rare, luminous, unforgettable.
+    </p>
+    <button class="btn-glow" onclick="go(4)">Continue ✦</button>
+  </div>
+
+  <!-- ══ PAGE 4 : REASONS ══ -->
+  <div class="page" id="p4">
+    <div class="dots">
+      <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+      <div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+    <p class="cinzel">Six truths about you</p>
+    <div class="divider"></div>
+    <ul class="dark-reasons">
+      <li><span style="color:#f5c842">✦</span> Your presence makes the whole room softer</li>
+      <li><span style="color:#f5c842">✦</span> Your laugh rewrites every sad song I know</li>
+      <li><span style="color:#f5c842">✦</span> You carry warmth the way the moon carries light</li>
+      <li><span style="color:#f5c842">✦</span> You love without condition — it's extraordinary</li>
+      <li><span style="color:#f5c842">✦</span> Even your quiet moments are beautiful, Shivani</li>
+      <li><span style="color:#f5c842">✦</span> You turned my ordinary life into something I cherish</li>
+    </ul>
+    <button class="btn-glow" onclick="go(5)">Almost there ✦</button>
+  </div>
+
+  <!-- ══ PAGE 5 : MOON PROMISE ══ -->
+  <div class="page" id="p5">
+    <div class="dots">
+      <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+      <div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+    </div>
+    <p class="cinzel">By the light of the moon</p>
+    <div class="moon"></div>
+    <div class="dark-quote">
+      Shivani, I promise to be your calm in every storm.<br>
+      To give you roses when you least expect them.<br>
+      To be the person who chooses you — every sunrise, every moonrise, every time.
+      <span>— my promise, always</span>
+    </div>
+    <button class="btn-glow" onclick="go(6)">The moment ✦</button>
+  </div>
+
+  <!-- ══ PAGE 6 : THE QUESTION ══ -->
+  <div class="page" id="p6">
+    <div class="dots">
+      <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+      <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+    </div>
+    <span class="heart-icon">❤️</span>
+    <p class="big-q">Shivani,<br>will you be mine?</p>
+    <div class="divider"></div>
+    <p class="body-text" style="font-size:0.92rem; margin-bottom:1rem;">
+      Say yes, and I'll spend every day making sure<br>you never forget how loved you are. 🌹
+    </p>
+    <div style="display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center;">
+      <button class="btn-yes" onclick="sayYes()">Yes, always 🌹</button>
+      <button class="btn-no" id="no-btn" onmouseover="flee()" onclick="flee()">No…</button>
+    </div>
+    <p style="font-size:0.72rem; color:#ffffff30; margin-top:1.2rem; font-style:italic; letter-spacing:0.05em;">
+      ✦ the stars already know your answer, Shivani ✦
+    </p>
+  </div>
+
+  <!-- ══ PAGE 7 : CELEBRATION ══ -->
+  <div class="page" id="p7">
+    <p class="cinzel">she said —</p>
+    <div class="final-name">Yes!</div>
+    <div style="font-size:2.2rem; margin:0.2rem 0 0.6rem; line-height:1.2;">🌹🌹🌹</div>
+    <div class="divider" style="margin:0.5rem auto;"></div>
+    <div class="dark-quote" style="text-align:center; border-left:none; border-top:1px solid #f5c84240; border-radius:0; padding-top:0.7rem; padding-bottom:0.4rem; margin-bottom:0.6rem; font-size:0.93rem; line-height:1.7;">
+      From this moment, I am yours, Shivani.<br>
+      Every star above, every rose on earth —<br>
+      they all tell the same story: <em style="color:#ffb3a0;">you are loved.</em>
+      <span>— forever yours 🌹</span>
+    </div>
+    <button class="btn-glow" onclick="go(8)" style="margin-top:0.5rem;">One last thing… ✦</button>
+  </div>
+
+  <!-- ══ PAGE 8 : VOICE & I LOVE YOU ══ -->
+  <div class="page" id="p8">
+    <div class="phone-ring-wrap">
+      <div class="phone-ring r1"></div>
+      <div class="phone-ring r2"></div>
+      <div class="phone-ring r3"></div>
+      <div class="phone-emoji">📞</div>
+    </div>
+    <p class="cinzel" style="margin-bottom:0.5rem;">Sirf ek baar baat hui…</p>
+    <div class="voice-line-wrap" id="voiceWave">
+      <span class="vbar"></span><span class="vbar"></span><span class="vbar"></span>
+      <span class="vbar"></span><span class="vbar"></span><span class="vbar"></span>
+      <span class="vbar"></span><span class="vbar"></span><span class="vbar"></span>
+      <span class="vbar"></span><span class="vbar"></span>
+    </div>
+    <div class="voice-quote">
+      Hum abhi tak mile nahi —<br>
+      sirf <em>ek baar</em> call pe baat hui…<br>
+      aur teri awaaz ne dil chhoo liya.<br>
+      <span style="color:#ffb3a0; font-style:normal;">Mujhe hamesha call par baat karni hai tumse. 🌙</span>
+    </div>
+    <div class="divider"></div>
+    <!-- Animated I LOVE YOU -->
+    <div class="ily-wrap" id="ilyWrap">
+      <span class="ily-word" id="ilyI">I</span>
+      <span class="ily-heart" id="ilyHeart">🩷</span>
+      <span class="ily-word" id="ilyLove">Love</span>
+      <span class="ily-word" id="ilyYou">You</span>
+    </div>
+    <div class="ily-name" id="ilyName">So Much, Shivani 🌹</div>
+    <div class="forever-line" id="foreverLine">— aur yeh sirf shuruat hai… ✨</div>
+  </div>
+
+</div><!-- #scene -->
+
+<script src="shivani-script.js"></script>
+</body>
+</html>
